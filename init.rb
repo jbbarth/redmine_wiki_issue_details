@@ -6,3 +6,7 @@ Redmine::Plugin.register :redmine_wiki_issue_details do
   url 'https://github.com/jbbarth/redmine_wiki_issue_details'
   author_url 'jeanbaptiste.barth@gmail.com'
 end
+
+Rails.application.config.to_prepare do
+  require_dependency 'redmine_wiki_issue_details/application_helper_patch'
+end
